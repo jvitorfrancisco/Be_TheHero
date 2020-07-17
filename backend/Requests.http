@@ -1,0 +1,44 @@
+GET http://localhost:3333/ongs
+###
+POST http://localhost:3333/ongs
+Content-Type: application/json
+
+{
+    "name": "APAB",
+    "email": "apab@teste.com",
+    "whatsapp": "(14) 991568062",
+    "city": "Brotas",
+    "uf": "SP"
+}
+### Incidents ----------------------------------------------------------------
+
+GET http://localhost:3333/incidents?page=0
+
+### Incidents
+POST http://localhost:3333/incidents
+Content-Type: application/json
+Authorization: 4b2a1f47
+
+{
+    "title": "Caso 1",
+    "description": "Detahes do caso",
+    "value": 120
+}
+
+###
+DELETE http://localhost:3333/incidents/1
+Authorization: 4b2a1f47
+
+
+### Profile --------------------------
+
+GET http://localhost:3333/profile
+Authorization: 4b2a1f47
+
+### Sessions ------------------------
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+    "id": "4b2a1f47"
+}
