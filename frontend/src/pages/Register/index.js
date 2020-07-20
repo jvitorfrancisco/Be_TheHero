@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
 import { FiArrowLeft} from 'react-icons/fi';
@@ -14,6 +14,8 @@ export default function Register(){
     const [city, setCity] = useState('');
     const [uf, setUf] = useState('');
 
+    const history = useHistory();
+
     async function handleRegister(e) {
         e.preventDefault();
 
@@ -27,6 +29,8 @@ export default function Register(){
                 'O usuário foi cadastrado', 
                 'success'
             );
+
+            history.push('/')
         } catch (error) {
             SweetAlert.fire(
                 `Ocorreu um erro !`, 

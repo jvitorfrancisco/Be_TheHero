@@ -16,6 +16,7 @@
     "migrate-roll": "npx knex migrate:rollback"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "sucrase": "^3.15.0"
   }
 }
