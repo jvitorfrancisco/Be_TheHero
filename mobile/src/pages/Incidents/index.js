@@ -10,6 +10,7 @@ import { Feather } from '@expo/vector-icons'
 export default function Incidents(){
     const navigation = useNavigation();
     const [incidents, setIncidents] = useState([]);
+    const incidentsFix = '';
 
     function navigateToDetail() {
         navigation.navigate('Detail');
@@ -17,6 +18,9 @@ export default function Incidents(){
 
     async function loadIncidents() {
         const response = await api.get('incidents');
+
+        console.log(response.data);
+        incidentsFix = response.data;
         setIncidents(response.data);
     }
 
@@ -64,6 +68,7 @@ export default function Incidents(){
                     </View>
                 )}
             />
+            <Text>{incidentsFix}</Text>
         </View>
     );
 }
