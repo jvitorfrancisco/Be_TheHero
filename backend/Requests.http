@@ -6,13 +6,13 @@ Content-Type: application/json
 {
     "name": "APAB",
     "email": "apab@teste.com",
-    "whatsapp": "(14) 991568062",
+    "whatsapp": "14991568062",
     "city": "Brotas",
     "uf": "SP"
 }
 ### Incidents ----------------------------------------------------------------
 
-GET http://localhost:3333/incidents?page=0
+GET http://localhost:3333/incidents?page=2
 
 ### Incidents
 POST http://localhost:3333/incidents
